@@ -1,5 +1,5 @@
 
-var skills = ["Java ", "Spring Core, ", "Spring MVC, ", "JS, ", "jQuery "];
+var skills = ["Java ", "Spring Core ", "Spring MVC ", "JS ", "jQuery "];
 var bio = {
     "name" : "Georgi Slavov",
     "role" : "Java Developer",
@@ -71,4 +71,11 @@ var work = {
             "environment" : "Siebel, Java SE, Spring, JSF + RichFaces, JUnit, CSS, jQuery, SVN"
         }
     ]
+};
+
+if (bio.skills.length > 0) {
+    $("#header").append(HTMLskillsStart);
+    for(i = 0; i < bio.skills.length; i++) {
+        $("#skills").append(HTMLskills.replace("%data%", bio.skills[i]));
+    }
 }
