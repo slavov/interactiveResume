@@ -19,12 +19,6 @@ var formattedName = HTMLheaderName.replace("%data%", bio.name);
 var formattedRole = HTMLheaderRole.replace("%data%", bio.role);
 $("#header").prepend(formattedRole).prepend(formattedName);
 
-var work = {};
-work.possition = "Java Developer";
-work.empoyer = "SDL";
-work.started = "06/2015";
-work.ended = "present";
-
 var education = {
     "university" : {
         "name" : "Kharkiv National University of Radio and Electronics, Ukraine",
@@ -47,4 +41,34 @@ var education = {
     ]
 };
 
-//$("#main").append(work["possition"]).append(education.name);
+var work = {
+    "jobs" : [
+        {
+           "employer": "SDL",
+            "title" : "Senior Software Engineer",
+            "dates" : "06/2015 – present",
+            "project" : "SDL LiveContent Reach",
+            "description" : "SDL LiveContent Reach is a dynamic delivery application that enables intelligent searching, rendering \
+                             and personalizing of content. SDL LiveContent Reach enables end users to interact with the content, and \
+                             track (passively) their activity for analytical purposes.",
+            "environment" : "Java SE, Spring MVC, exist-db, XSL, XQL, JS, Tomcat, GIT, Agile"
+        },
+        {
+            "employer": "Ciklum",
+            "title" : "Senior Software Engineer",
+            "dates" : "08/2013 – 06/2015",
+            "project" : "Buildings Project Management System",
+            "description" : "A large system for serving buildings project from a scratch to full completion.",
+            "environment" : "Java SE, Spring, Versant, JSF + Primefaces, JS, CSS, Glassfish, Perforce"
+        },
+        {
+            "employer": "DataArt Solutions, Inc",
+            "title" : "Software Engineer",
+            "dates" : "03/2011 – 08/2013",
+            "project" : "Rich Web Application Middleware",
+            "description" : "The project was aimed at creating an efficient and developer-friendly middleware to facilitate development \
+                             of rich web applications with Oracle Siebel CRM backend.",
+            "environment" : "Siebel, Java SE, Spring, JSF + RichFaces, JUnit, CSS, jQuery, SVN"
+        }
+    ]
+}
