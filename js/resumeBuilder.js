@@ -1,4 +1,4 @@
-
+var replaceData = "%data%";
 var skills = ["Java ", "Spring Core ", "Spring MVC ", "JS ", "jQuery "];
 var bio = {
     "name" : "Georgi Slavov",
@@ -15,8 +15,8 @@ var bio = {
     "skills" : skills
 };
 
-var formattedName = HTMLheaderName.replace("%data%", bio.name);
-var formattedRole = HTMLheaderRole.replace("%data%", bio.role);
+var formattedName = HTMLheaderName.replace(replaceData, bio.name);
+var formattedRole = HTMLheaderRole.replace(replaceData, bio.role);
 $("#header").prepend(formattedRole).prepend(formattedName);
 
 var education = {
@@ -75,7 +75,14 @@ var work = {
 
 if (bio.skills.length > 0) {
     $("#header").append(HTMLskillsStart);
-    for(i = 0; i < bio.skills.length; i++) {
-        $("#skills").append(HTMLskills.replace("%data%", bio.skills[i]));
+    for(skill in skills) {
+        $("#skills").append(HTMLskills.replace(replaceData, skills[skill]));
     }
+}
+
+for(job in work.jobs) {
+    $("#workExperience").append(HTMLworkStart);
+    var formattedEmp = HTMLworkEmployer.replace(replaceData, work.jobs[job].employer);
+    var formatteTitle = HTMLworkEmployer.replace(replaceData, work.jobs[job].title);
+    $(".work-entry:last").append(formattedEmp + formatteTitle);
 }
