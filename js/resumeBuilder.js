@@ -25,9 +25,26 @@ work.empoyer = "SDL";
 work.started = "06/2015";
 work.ended = "present";
 
-var education = {};
-education["name"] = "Kharkiv National University of Radio and Electronics, Ukraine";
-education["degree"] = "Master’s degree on department “Computer engineering";
-education["years"] = "2006-2011";
+var education = {
+    "university" : {
+        "name" : "Kharkiv National University of Radio and Electronics, Ukraine",
+        "degree" : "Master’s degree on department “Computer engineering",
+        "years" : "2006-2011"
+    },
+    "onlineCourses": [
+        {
+            "title" : "M101J: MongoDB for Java Developers",
+            "school": "MonogoDB University",
+            "dates" : 2014,
+            "url" : "https://university.mongodb.com/courses/10gen/M101J/2014_May/syllabus"
+        },
+        {
+            "title" : "JavaScript Basics",
+            "school": "Udacity",
+            "dates" : 2015,
+            "url" : "https://www.udacity.com/course/ud804"
+        }
+    ]
+};
 
-$("#main").append(work["possition"]).append(education.name);
+//$("#main").append(work["possition"]).append(education.name);
