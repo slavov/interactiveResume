@@ -20,7 +20,7 @@ var formattedRole = HTMLheaderRole.replace("%data%", bio.role);
 $("#header").prepend(formattedRole).prepend(formattedName);
 
 var work = {};
-work.possiotion = "Java Developer";
+work.possition = "Java Developer";
 work.empoyer = "SDL";
 work.started = "06/2015";
 work.ended = "present";
@@ -29,3 +29,5 @@ var education = {};
 education["name"] = "Kharkiv National University of Radio and Electronics, Ukraine";
 education["degree"] = "Master’s degree on department “Computer engineering";
 education["years"] = "2006-2011";
+
+$("#main").append(work["possition"]).append(education.name);
