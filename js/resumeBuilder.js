@@ -18,3 +18,9 @@ var bio = {
 var formattedName = HTMLheaderName.replace("%data%", bio.name);
 var formattedRole = HTMLheaderRole.replace("%data%", bio.role);
 $("#header").prepend(formattedRole).prepend(formattedName);
+
+var work = {};
+work.possiotion = "Java Developer";
+work.empoyer = "SDL";
+work.started = "06/2015";
+work.ended = "present";
