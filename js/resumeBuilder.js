@@ -17,7 +17,7 @@ var bio = {
 
 var formattedName = HTMLheaderName.replace(replaceData, bio.name);
 var formattedRole = HTMLheaderRole.replace(replaceData, bio.role);
-$("#header").prepend(formattedRole).prepend(formattedName);
+$("#header").prepend(formattedRole).prepend(formattedName).append(HTMLbioPic.replace(replaceData, bio.pic));
 
 var education = {
     "university" : {
