@@ -1,5 +1,5 @@
 var replaceData = "%data%";
-var skills = ["Java ", "Spring Core ", "Spring MVC ", "JS ", "jQuery "];
+var skills = ["Java", "Spring Core", "Spring MVC", "JS", "jQuery", "GIT", "SVN", "Perforce", "XML", "Scrum"];
 var bio = {
     "name" : "Georgi Slavov",
     "role" : "Java Developer",
@@ -97,3 +97,22 @@ function displayWork() {
     }
 }
 displayWork();
+
+function displayProjects() {
+    for (i in work.jobs) {
+        $("#projects").append(HTMLprojectStart);
+        $(".project-entry:last").append(HTMLprojectTitle.replace(replaceData, work.jobs[i].project))
+            .append(HTMLprojectDescription.replace(replaceData, work.jobs[i].description));
+    }
+};
+
+displayProjects();
+
+/*
+project.display = function() {
+    for(i in work.jobs) {
+        $("#projects").append(HTMLprojectStart);
+        $(".project-entry:last").append(HTMLprojectTitle.replace(replaceData, work.jobs[i].project))
+            .append(HTMLprojectDescription.replace(replaceData, work.jobs[i].description));
+    }
+};*/
