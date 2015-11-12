@@ -49,7 +49,7 @@ var work = {
         {
            "employer": "SDL",
             "title" : "Senior Software Engineer",
-            "dates" : "06/2015 – present",
+            "dates" : "06/2015 - present",
             "project" : "SDL LiveContent Reach",
             "description" : "SDL LiveContent Reach is a dynamic delivery application that enables intelligent searching, rendering \
                              and personalizing of content. SDL LiveContent Reach enables end users to interact with the content, and \
@@ -59,7 +59,7 @@ var work = {
         {
             "employer": "Ciklum",
             "title" : "Senior Software Engineer",
-            "dates" : "08/2013 – 06/2015",
+            "dates" : "08/2013 - 06/2015",
             "project" : "Buildings Project Management System",
             "description" : "A large system for serving buildings project from a scratch to full completion.",
             "environment" : "Java SE, Spring, Versant, JSF + Primefaces, JS, CSS, Glassfish, Perforce"
@@ -67,7 +67,7 @@ var work = {
         {
             "employer": "DataArt Solutions, Inc",
             "title" : "Software Engineer",
-            "dates" : "03/2011 – 08/2013",
+            "dates" : "03/2011 - 08/2013",
             "project" : "Rich Web Application Middleware",
             "description" : "The project was aimed at creating an efficient and developer-friendly middleware to facilitate development \
                              of rich web applications with Oracle Siebel CRM backend.",
@@ -86,6 +86,8 @@ if (bio.skills.length > 0) {
 for(job in work.jobs) {
     $("#workExperience").append(HTMLworkStart);
     var formattedEmp = HTMLworkEmployer.replace(replaceData, work.jobs[job].employer);
-    var formatteTitle = HTMLworkEmployer.replace(replaceData, work.jobs[job].title);
-    $(".work-entry:last").append(formattedEmp + formatteTitle);
+    var formatteTitle = HTMLworkTitle.replace(replaceData, work.jobs[job].title);
+    $(".work-entry:last").append(formattedEmp + formatteTitle).append(HTMLworkDates.replace(replaceData, work.jobs[job].dates))
+        .append(HTMLworkDescription.replace(replaceData, work.jobs[job].description));
+
 }
