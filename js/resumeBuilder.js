@@ -108,6 +108,8 @@ function displayProjects() {
 
 displayProjects();
 
+$("#mapDiv").append(googleMap);
+
 /*
 project.display = function() {
     for(i in work.jobs) {
